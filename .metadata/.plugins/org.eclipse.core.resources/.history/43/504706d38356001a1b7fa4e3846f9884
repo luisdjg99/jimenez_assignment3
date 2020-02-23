@@ -1,0 +1,23 @@
+
+public class SavingsAccountTest extends SavingsAccount {
+	
+	public static void main(String[] args) {
+		SavingsAccount saver1 = new SavingsAccount();
+		SavingsAccount saver2 = new SavingsAccount();
+		
+		saver1.setSavingBalance(2000.00);
+		saver2.setSavingBalance(3000.00);
+		
+		modifyInterestRate(0.04);
+		
+		System.out.println("Month\t saver1\t saver2");
+		
+		for(int i = 0; i<12; i++) {
+			System.out.println((i +1) + "\t" + saver1.calculateMonthlyInterest() + "\t" + saver2.calculateMonthlyInterest() );
+		}
+		
+		
+		
+	}
+
+}
